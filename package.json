@@ -1,0 +1,23 @@
+{
+  "name": "activite-seance-3-refactorisation",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Batiste Blactot",
+  "license": "ISC",
+  "description": "Refactorisation d'un code existant pour le rendre plus lisible et maintenable avec l'architecture MVC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "mongoose": "^8.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
