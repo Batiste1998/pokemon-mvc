@@ -18,7 +18,7 @@ Ce projet est une refactorisation d'une application PHP en Node.js suivant le pa
 
 1. **Clonez le repository**
 ```bash
-git clone [votre-repo]
+git clone https://github.com/Batiste1998/pokemon-mvc.git
 cd pokemon-mvc
 ```
 
