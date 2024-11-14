@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "client": "yarn --cwd ../client start",
+    "server": "nodemon server.js",
+    "dev": "concurrently -n \"CLIENT,SERVER\" -c \"blue.bold,green.bold\" \"yarn client\" \"yarn server\""
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "dotenv": "16.4.5",
+    "express": "4.21.1",
+    "express-validator": "7.2.0",
+    "mongoose": "8.8.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "concurrently": "9.1.0",
+    "nodemon": "3.1.7"
+  }
+}
