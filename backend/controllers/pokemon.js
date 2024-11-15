@@ -1,4 +1,5 @@
 const PokemonModel = require('../models/Pokemon')
+const { listErrors } = require('../utils/tools')
 
 const methods = {
   create: (req, res) => {
@@ -18,7 +19,7 @@ const methods = {
   all: (req, res) => {
     PokemonModel.find()
       .then((result) => res.json({ success: true, result }))
-      .catch((error) => res.status(400).json({ success: false, result: error }))
+      .catch((error) => res.status(400).json({ success: false, result: listErrors(error) }))
   },
 
   delete: (req, res) => {
@@ -33,7 +34,7 @@ const methods = {
         }
         res.json({ success: true, result })
       })
-      .catch((error) => res.status(400).json({ success: false, result: error }))
+      .catch((error) => res.status(400).json({ success: false, result: listErrors(error) }))
   },
 
   update: (req, res) => {
@@ -48,7 +49,7 @@ const methods = {
         }
         res.json({ success: true, result })
       })
-      .catch((error) => res.status(400).json({ success: false, result: error }))
+      .catch((error) => res.status(400).json({ success: false, result: listErrors(error) }))
   },
 
   find: (req, res) => {
@@ -63,7 +64,7 @@ const methods = {
         }
         res.json({ success: true, result })
       })
-      .catch((error) => res.status(400).json({ success: false, result: error }))
+      .catch((error) => res.status(400).json({ success: false, result: listErrors(error) }))
   },
 }
 
