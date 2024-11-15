@@ -1,10 +1,11 @@
 const express = require('express')
 const router = express.Router()
+const pokemonController = require('./../controllers/pokemon')
 
-router.post('/create')
-router.get('/all')
-router.delete('/delete')
-router.put('/update')
-router.get('/find/:_id')
+router.post('/create', pokemonController.create)
+router.get('/all', pokemonController.all)
+router.delete('/delete', pokemonController.delete)
+router.put('/update', pokemonController.update)
+router.get('/find/:_id', pokemonController.find)
 
 module.exports = router
